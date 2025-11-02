@@ -12,7 +12,7 @@ export default function NavBar() {
       component="nav"
       aria-label="main navigation"
       sx={{
-        bgcolor: "#ffffff",
+        bgcolor: "#F6F7F9",
       }}
     >
       <Toolbar
@@ -24,31 +24,17 @@ export default function NavBar() {
           py: 1.5,
         }}
       >
-        {/* Left: Brand */}
         <Stack direction="row" alignItems="center" spacing={1.5}>
-          {/* F Logo */}
           <Box
+            component="img"
+            src="/images/FreightFi-logo.svg"
+            alt="FreightFi Logo"
             sx={{
-              width: 32,
-              height: 32,
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
+              width: 35,
+              height: 35,
             }}
-          >
-            <Typography
-              sx={{
-                fontSize: 24,
-                fontWeight: 700,
-                color: "#2563EB",
-                lineHeight: 1,
-              }}
-            >
-              F
-            </Typography>
-          </Box>
+          />
           
-          {/* FreightFi Text */}
           <Typography
             variant="h6"
             component="div"
@@ -63,7 +49,6 @@ export default function NavBar() {
           </Typography>
         </Stack>
 
-        {/* Center: Nav Items (desktop only) */}
         <Stack
           direction="row"
           spacing={3}
@@ -96,18 +81,54 @@ export default function NavBar() {
           ))}
         </Stack>
 
-        {/* Right: CTA Button */}
+        <Button
+          variant="outlined"
+          aria-label="Menu"
+          sx={{
+            display: { xs: "flex", md: "none" },
+            minWidth: "auto",
+            width: 48,
+            height: 48,
+            borderRadius: "8px",
+            border: "1px solid #4C80F5",
+            bgcolor: "#E9EFFD",
+            alignItems: "center",
+            justifyContent: "center",
+            p: 0,
+            "&:hover": {
+              border: "1px solid #4C80F5",
+              bgcolor: "#E9EFFD",
+            },
+          }}
+        >
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M3 12H21M3 6H21M3 18H21"
+              stroke="#4C80F5"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+        </Button>
+
         <Button
           variant="outlined"
           aria-label="Book a demo"
           sx={{
+            display: { xs: "none", md: "flex" },
             borderRadius: "41px",
             border: "1px solid #E5E7EB",
             pt: "8px",
             pr: "6px",
             pb: "8px",
             pl: "16px",
-            display: "flex",
             alignItems: "center",
             gap: "8px",
             textTransform: "none",
@@ -117,7 +138,6 @@ export default function NavBar() {
             },
           }}
         >
-          {/* CTA Text */}
           <Typography
             sx={{
               fontSize: 16,
@@ -129,7 +149,6 @@ export default function NavBar() {
             Book a Demo
           </Typography>
 
-          {/* Trailing Blue Circle with Chevron */}
           <Box
             sx={{
               width: 28,
@@ -142,7 +161,6 @@ export default function NavBar() {
               flexShrink: 0,
             }}
           >
-            {/* Chevron SVG */}
             <svg
               width="7.5"
               height="13.75"

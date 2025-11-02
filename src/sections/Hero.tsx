@@ -6,64 +6,37 @@ export default function Hero() {
     <Box
       component="section"
       sx={{
-        py: { xs: 6, md: 8 },
+        py: { xs: 4, md: 8 },
       }}
     >
-      {/* Top Section - Text Content */}
-      <Stack spacing={{ xs: 3, md: 0 }}>
-        {/* Trusted Pill - Full width on mobile, at top on desktop */}
-        <Box
-          role="img"
-          aria-label="Trusted by leading logistics companies"
-          sx={{
-            width: { xs: "100%", sm: "fit-content" },
-            maxWidth: 309,
-            height: 32,
-            border: "1px solid #E6E6E6",
-            borderRadius: "16px",
-            background: "linear-gradient(90deg, #DFFAEE29 0%, #D1DEFA29 100%)",
-            px: "12px",
-            display: "flex",
-            alignItems: "center",
-            gap: "8px",
-            mb: { xs: 3, md: 5 },
-          }}
-        >
-          {/* Shield Icon */}
+      <Stack spacing={{ xs: 2, md: 4 }}>
+        <Box sx={{ pl: { xs: 0, md: 5 } }}>
           <Box
+            role="img"
+            aria-label="Trusted by leading logistics companies"
+            sx={{
+              width: { xs: "100%", sm: "fit-content" },
+              maxWidth: 309,
+              height: 32,
+              border: "1px solid #E6E6E6",
+              borderRadius: "16px",
+              background: "linear-gradient(90deg, #DFFAEE29 0%, #D1DEFA29 100%)",
+              px: "12px",
+              display: "flex",
+              alignItems: "center",
+              gap: "8px",
+            }}
+          >
+          <Box
+            component="img"
+            src="/images/trusted-emblem.svg"
+            alt="Trusted shield icon"
             sx={{
               width: 16,
               height: 17,
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
               flexShrink: 0,
             }}
-          >
-            <svg
-              width="16"
-              height="17"
-              viewBox="0 0 18 19"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M9 1.5L2.25 4.125V8.625C2.25 12.7875 5.0625 16.6875 9 17.625C12.9375 16.6875 15.75 12.7875 15.75 8.625V4.125L9 1.5Z"
-                stroke="#000000"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                fill="none"
-              />
-              <path
-                d="M6.75 9.375L8.25 10.875L11.625 7.5"
-                stroke="#000000"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </Box>
+          />
           
           <Typography
             sx={{
@@ -76,23 +49,22 @@ export default function Hero() {
           >
             Trusted by Leading Logistics Companies
           </Typography>
+          </Box>
         </Box>
 
-        {/* Two Column Layout for Desktop, Stacked for Mobile */}
         <Box
           sx={{
             display: "grid",
             gridTemplateColumns: { xs: "1fr", md: "1fr 1fr" },
-            gap: { xs: 3, md: 10 },
+            gap: { xs: 3, md: 20 },
             mb: { xs: 4, md: 8 },
           }}
         >
-          {/* Left: Headline */}
-          <Box sx={{ maxWidth: { xs: "100%", md: 664 } }}>
+          <Box sx={{ maxWidth: { xs: "100%", md: 664 }, pl: { xs: 0, md: 5 } }}>
             <Typography
               variant="h1"
               sx={{
-                fontSize: { xs: 36, sm: 44, md: 56 },
+                fontSize: { xs: 36, sm: 44, md: 64 },
                 fontWeight: 500,
                 color: "#000000",
                 lineHeight: 1.15,
@@ -105,13 +77,11 @@ export default function Hero() {
             </Typography>
           </Box>
 
-          {/* Right: Body Copy + Buttons */}
-          <Stack spacing={3} sx={{ justifyContent: "flex-end" }}>
-            {/* Body Copy */}
+          <Stack spacing={3} sx={{ justifyContent: "flex-end", pl: { xs: 0, md: 6 } }}>
             <Box sx={{ maxWidth: { xs: "100%", md: 527 } }}>
               <Typography
                 sx={{
-                  fontSize: { xs: 15, md: 16 },
+                  fontSize: { xs: 15, md: 18 },
                   fontWeight: 400,
                   color: "#4B4B4B",
                   lineHeight: 1.5,
@@ -121,9 +91,7 @@ export default function Hero() {
               </Typography>
             </Box>
 
-            {/* Buttons Row */}
-            <Stack direction={{ xs: "column", sm: "row" }} spacing={1}>
-              {/* Primary Button - Book a Demo */}
+            <Stack direction="row" spacing={1} sx={{ width: { xs: "100%", md: "auto" } }}>
               <Button
                 variant="contained"
                 sx={{
@@ -138,7 +106,8 @@ export default function Hero() {
                   display: "flex",
                   alignItems: "center",
                   gap: "8px",
-                  width: { xs: "100%", sm: "auto" },
+                  flex: { xs: 1, md: "0 0 auto" },
+                  width: { md: "auto" },
                   "&:hover": {
                     bgcolor: "#1d4ed8",
                   },
@@ -147,7 +116,7 @@ export default function Hero() {
                 <Typography
                   sx={{
                     fontSize: 14,
-                    fontWeight: 500,
+                    fontWeight: 600,
                     color: "#FFFFFF",
                     lineHeight: 1,
                   }}
@@ -155,7 +124,6 @@ export default function Hero() {
                   Book a Demo
                 </Typography>
                 
-                {/* Chevron Circle */}
                 <Box
                   sx={{
                     width: 28,
@@ -186,7 +154,6 @@ export default function Hero() {
                 </Box>
               </Button>
 
-              {/* Secondary Button - See How It Works */}
               <Button
                 variant="outlined"
                 sx={{
@@ -201,7 +168,8 @@ export default function Hero() {
                   display: "flex",
                   alignItems: "center",
                   gap: "8px",
-                  width: { xs: "100%", sm: "auto" },
+                  flex: { xs: 1, md: "0 0 auto" },
+                  width: { md: "auto" },
                   "&:hover": {
                     border: "1px solid #B9B9B9",
                     bgcolor: "rgba(0, 0, 0, 0.02)",
@@ -211,7 +179,7 @@ export default function Hero() {
                 <Typography
                   sx={{
                     fontSize: 14,
-                    fontWeight: 500,
+                    fontWeight: 600,
                     color: "#000000",
                     lineHeight: 1,
                   }}
@@ -219,7 +187,6 @@ export default function Hero() {
                   See How It Works
                 </Typography>
                 
-                {/* Chevron Circle */}
                 <Box
                   sx={{
                     width: 28,
@@ -254,70 +221,56 @@ export default function Hero() {
         </Box>
       </Stack>
 
-      {/* Bottom Section - Angled Dashboard Visual */}
       <Box
         sx={{
           position: "relative",
           width: "100%",
-          minHeight: { xs: 300, sm: 400, md: 500 },
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
           mt: { xs: 4, md: 6 },
         }}
       >
-        {/* Trapezoid Backdrop */}
-        <Box
-          sx={{
-            position: "absolute",
-            width: "100%",
-            height: "90%",
-            background: "linear-gradient(135deg, #F5F5F5 0%, #E8E8E8 100%)",
-            clipPath: "polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%)",
-            boxShadow: "0px 20px 60px rgba(0, 0, 0, 0.08)",
-            zIndex: 0,
-          }}
-        />
-
-        {/* Angled Dashboard Image */}
         <Box
           component="img"
-          src="/images/hero-dashboard.png"
+          src="/images/FreightFi-dashboard-mobile.png"
           alt="FreightFi dashboard preview showing financial overview"
           sx={{
-            position: "relative",
-            width: "90%",
-            maxWidth: 900,
+            width: "100%",
             height: "auto",
-            transform: "perspective(1500px) rotateY(-5deg) rotateX(1deg)",
-            boxShadow: "0px 30px 80px rgba(0, 0, 0, 0.15)",
-            borderRadius: 2,
-            zIndex: 1,
-            // Fallback for missing image
-            bgcolor: "#F5F5F5",
-            minHeight: { xs: 280, sm: 380, md: 450 },
-            objectFit: "cover",
+            display: { xs: "block", md: "none" },
           }}
           onError={(e: React.SyntheticEvent<HTMLImageElement>) => {
-            // Graceful fallback if image doesn't exist
             e.currentTarget.style.display = "none";
           }}
         />
-
-        {/* Bottom Fade/Ambient Shadow */}
+        
+        <Box
+          component="img"
+          src="/images/FreightFi-dashboard.png"
+          alt="FreightFi dashboard preview showing financial overview"
+          sx={{
+            width: "100%",
+            height: "auto",
+            display: { xs: "none", md: "block" },
+          }}
+          onError={(e: React.SyntheticEvent<HTMLImageElement>) => {
+            e.currentTarget.style.display = "none";
+          }}
+        />
+        
         <Box
           sx={{
             position: "absolute",
-            bottom: -60,
-            left: "50%",
-            transform: "translateX(-50%)",
-            width: "70%",
-            height: 140,
-            background:
-              "radial-gradient(ellipse at center, rgba(0, 0, 0, 0.08) 0%, rgba(0, 0, 0, 0) 70%)",
-            filter: "blur(30px)",
-            zIndex: 0,
+            bottom: 0,
+            left: 0,
+            right: 0,
+            width: "100%",
+            height: { xs: "180px", sm: "300px", md: "205px" },
+            background: {
+              xs: "linear-gradient(to top, #F6F7F9 0%, #F6F7F9 40%, rgba(246, 247, 249, 0.8) 70%, rgba(246, 247, 249, 0) 100%)",
+              sm: "linear-gradient(to top, #F6F7F9 0%, #F6F7F9 35%, rgba(246, 247, 249, 0.8) 65%, rgba(246, 247, 249, 0) 100%)",
+              md: "linear-gradient(to top, #F6F7F9 0%, rgba(246, 247, 249, 0.7) 70%, rgba(246, 247, 249, 0) 100%)"
+            },
             pointerEvents: "none",
+            zIndex: 1,
           }}
         />
       </Box>
