@@ -1,5 +1,5 @@
 import * as React from "react";
-import { AppBar, Toolbar, Typography, Button, Box, Stack } from "@mui/material";
+import { AppBar, Toolbar, Typography, Button, Box, Stack, Container } from "@mui/material";
 
 export default function NavBar() {
   const navItems = ["Product", "Solutions", "About", "Resources", "Contact"];
@@ -15,15 +15,17 @@ export default function NavBar() {
         bgcolor: "#F6F7F9",
       }}
     >
-      <Toolbar
-        sx={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-          px: { xs: 2, md: 4 },
-          py: 1.5,
-        }}
-      >
+      <Container maxWidth="xl" disableGutters sx={{ px: { xs: 2, md: 4 } }}>
+        <Toolbar
+          disableGutters
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+            pl: { xs: 0, md: 5 },
+            py: 1.5,
+          }}
+        >
         <Stack direction="row" alignItems="center" spacing={1.5}>
           <Box
             component="img"
@@ -118,70 +120,22 @@ export default function NavBar() {
           </svg>
         </Button>
 
-        <Button
-          variant="outlined"
-          aria-label="Book a demo"
+        <Box
+          component="img"
+          src="/images/book-a-demo.svg"
+          alt="Book a Demo"
           sx={{
-            display: { xs: "none", md: "flex" },
-            borderRadius: "41px",
-            border: "1px solid #E5E7EB",
-            pt: "8px",
-            pr: "6px",
-            pb: "8px",
-            pl: "16px",
-            alignItems: "center",
-            gap: "8px",
-            textTransform: "none",
+            display: { xs: "none", md: "block" },
+            height: 44,
+            width: "auto",
+            cursor: "pointer",
             "&:hover": {
-              border: "1px solid #E5E7EB",
-              bgcolor: "rgba(0, 0, 0, 0.02)",
+              opacity: 0.9,
             },
           }}
-        >
-          <Typography
-            sx={{
-              fontSize: 16,
-              fontWeight: 500,
-              color: "#000000",
-              lineHeight: 1,
-            }}
-          >
-            Book a Demo
-          </Typography>
-
-          <Box
-            sx={{
-              width: 28,
-              height: 28,
-              borderRadius: "14px",
-              bgcolor: "#2563EB",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              flexShrink: 0,
-            }}
-          >
-            <svg
-              width="7.5"
-              height="13.75"
-              viewBox="0 0 8 14"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              style={{
-                display: "block",
-              }}
-            >
-              <path
-                d="M1 1L7 7L1 13"
-                stroke="#FEFFFF"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </Box>
-        </Button>
+        />
       </Toolbar>
+      </Container>
     </AppBar>
   );
 }

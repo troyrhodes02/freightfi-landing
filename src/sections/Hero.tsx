@@ -15,8 +15,7 @@ export default function Hero() {
             role="img"
             aria-label="Trusted by leading logistics companies"
             sx={{
-              width: { xs: "100%", sm: "fit-content" },
-              maxWidth: 309,
+              width: "fit-content",
               height: 32,
               border: "1px solid #E6E6E6",
               borderRadius: "16px",
@@ -44,7 +43,7 @@ export default function Hero() {
               fontWeight: 400,
               color: "#000000",
               lineHeight: 1,
-              whiteSpace: { xs: "normal", sm: "nowrap" },
+              whiteSpace: "nowrap",
             }}
           >
             Trusted by Leading Logistics Companies
@@ -91,131 +90,45 @@ export default function Hero() {
               </Typography>
             </Box>
 
-            <Stack direction="row" spacing={1} sx={{ width: { xs: "100%", md: "auto" } }}>
-              <Button
-                variant="contained"
+            <Stack 
+              direction="row" 
+              spacing={{ xs: 1, md: 3 }} 
+              sx={{ 
+                width: { xs: "100%", md: "auto" },
+                ml: { xs: -1, md: 0 },
+              }}
+            >
+              <Box
+                component="img"
+                src="/images/book-a-demo-blue.svg"
+                alt="Book a Demo"
                 sx={{
-                  height: 44,
-                  borderRadius: "41px",
-                  pt: "8px",
-                  pr: "6px",
-                  pb: "8px",
-                  pl: "16px",
-                  bgcolor: "#2563EB",
-                  textTransform: "none",
-                  display: "flex",
-                  alignItems: "center",
-                  gap: "8px",
+                  height: { xs: 44, md: 44 },
+                  width: { xs: "100%", md: "auto" },
+                  cursor: "pointer",
                   flex: { xs: 1, md: "0 0 auto" },
-                  width: { md: "auto" },
+                  objectFit: "contain",
                   "&:hover": {
-                    bgcolor: "#1d4ed8",
+                    opacity: 0.9,
                   },
                 }}
-              >
-                <Typography
-                  sx={{
-                    fontSize: 14,
-                    fontWeight: 600,
-                    color: "#FFFFFF",
-                    lineHeight: 1,
-                  }}
-                >
-                  Book a Demo
-                </Typography>
-                
-                <Box
-                  sx={{
-                    width: 28,
-                    height: 28,
-                    borderRadius: "14px",
-                    bgcolor: "rgba(255, 255, 255, 0.2)",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    flexShrink: 0,
-                  }}
-                >
-                  <svg
-                    width="7.5"
-                    height="13.75"
-                    viewBox="0 0 8 14"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M1 1L7 7L1 13"
-                      stroke="#FFFFFF"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </Box>
-              </Button>
+              />
 
-              <Button
-                variant="outlined"
+              <Box
+                component="img"
+                src="/images/see-how-it-works.svg"
+                alt="See How It Works"
                 sx={{
-                  height: 44,
-                  borderRadius: "41px",
-                  pt: "8px",
-                  pr: "6px",
-                  pb: "8px",
-                  pl: "16px",
-                  border: "1px solid #B9B9B9",
-                  textTransform: "none",
-                  display: "flex",
-                  alignItems: "center",
-                  gap: "8px",
+                  height: { xs: 44, md: 44 },
+                  width: { xs: "100%", md: "auto" },
+                  cursor: "pointer",
                   flex: { xs: 1, md: "0 0 auto" },
-                  width: { md: "auto" },
+                  objectFit: "contain",
                   "&:hover": {
-                    border: "1px solid #B9B9B9",
-                    bgcolor: "rgba(0, 0, 0, 0.02)",
+                    opacity: 0.9,
                   },
                 }}
-              >
-                <Typography
-                  sx={{
-                    fontSize: 14,
-                    fontWeight: 600,
-                    color: "#000000",
-                    lineHeight: 1,
-                  }}
-                >
-                  See How It Works
-                </Typography>
-                
-                <Box
-                  sx={{
-                    width: 28,
-                    height: 28,
-                    borderRadius: "14px",
-                    bgcolor: "#000000",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    flexShrink: 0,
-                  }}
-                >
-                  <svg
-                    width="7.5"
-                    height="13.75"
-                    viewBox="0 0 8 14"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M1 1L7 7L1 13"
-                      stroke="#FFFFFF"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </Box>
-              </Button>
+              />
             </Stack>
           </Stack>
         </Box>
@@ -225,7 +138,7 @@ export default function Hero() {
         sx={{
           position: "relative",
           width: "100%",
-          mt: { xs: 4, md: 6 },
+          mt: { xs: 6, md: 10 },
         }}
       >
         <Box
