@@ -1,8 +1,7 @@
-import * as React from "react";
-import { AppBar, Toolbar, Typography, Button, Box, Stack, Container } from "@mui/material";
+import { AppBar, Toolbar, Typography, Box, Stack, Container, Link } from "@mui/material";
 
 export default function NavBar() {
-  const navItems = ["Product", "Solutions", "About", "Resources", "Contact"];
+  // const navItems = ["Product", "Solutions", "About", "Resources", "Contact"];
 
   return (
     <AppBar
@@ -61,7 +60,8 @@ export default function NavBar() {
             transform: "translateX(-50%)",
           }}
         >
-          {navItems.map((item) => (
+          {/* Commened out until we have navbar options implemented */}
+          {/* {navItems.map((item) => (
             <Button
               key={item}
               sx={{
@@ -80,10 +80,11 @@ export default function NavBar() {
             >
               {item}
             </Button>
-          ))}
+          ))} */}
         </Stack>
 
-        <Button
+      {/* Commened out until we have navbar options implemented */}
+        {/* <Button
           variant="outlined"
           aria-label="Menu"
           sx={{
@@ -118,8 +119,9 @@ export default function NavBar() {
               strokeLinejoin="round"
             />
           </svg>
-        </Button>
+        </Button> */}
 
+      <Link href="https://calendar.app.google/jiyCYTJCvfRYMbyq6">
         <Box
           component="img"
           src="/images/book-a-demo.svg"
@@ -133,7 +135,8 @@ export default function NavBar() {
               opacity: 0.9,
             },
           }}
-        />
+          />
+          </Link>
       </Toolbar>
       </Container>
     </AppBar>

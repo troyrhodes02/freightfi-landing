@@ -1,5 +1,4 @@
-import * as React from "react";
-import { Box, Button, Stack, Typography } from "@mui/material";
+import { Box, Link, Stack, Typography } from "@mui/material";
 
 export default function Hero() {
   return (
@@ -98,6 +97,7 @@ export default function Hero() {
                 ml: { xs: -1, md: 0 },
               }}
             >
+              <Link href="https://calendar.app.google/jiyCYTJCvfRYMbyq6">
               <Box
                 component="img"
                 src="/images/book-a-demo-blue.svg"
@@ -112,8 +112,9 @@ export default function Hero() {
                     opacity: 0.9,
                   },
                 }}
-              />
-
+                />
+                </Link>
+              <Link href="https://calendar.app.google/jiyCYTJCvfRYMbyq6">
               <Box
                 component="img"
                 src="/images/see-how-it-works.svg"
@@ -128,7 +129,8 @@ export default function Hero() {
                     opacity: 0.9,
                   },
                 }}
-              />
+                />
+                </Link>
             </Stack>
           </Stack>
         </Box>
