@@ -23,22 +23,27 @@ export default function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Box 
-        sx={{ 
-          bgcolor: "#F6F7F9", 
-          minHeight: "100dvh",
+      <Box
+        sx={{
           opacity: loaded ? 1 : 0,
           transform: loaded ? "translateY(0)" : "translateY(20px)",
           transition: "opacity 1.2s ease-out, transform 1.2s ease-out",
         }}
       >
-        <NavBar />
-        <Container maxWidth="xl" sx={{ px: { xs: 2, md: 4 } }}>
-          <Hero />
-        </Container>
-        <Values />
+        <Box 
+          sx={{ 
+            bgcolor: "#F6F7F9", 
+            minHeight: "100dvh",
+          }}
+        >
+          <NavBar />
+          <Container maxWidth="xl" sx={{ px: { xs: 2, md: 4 } }}>
+            <Hero />
+          </Container>
+          <Values />
+        </Box>
+        <Footer />
       </Box>
-      <Footer />
     </ThemeProvider>
   );
 }
