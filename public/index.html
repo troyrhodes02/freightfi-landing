@@ -30,23 +30,21 @@
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <title>FreightFi - Close your books fast, Get paid even faster</title>
     <style>
-      html {
-        background-color: #0D0D0D;
-        /* Prevents rubber band scrolling on iOS from showing white */
-      }
-      
       body {
         margin: 0;
         padding: 0;
-        background-color: #0D0D0D;
-        /* iOS-specific: ensures overscroll area matches footer color */
-        -webkit-overflow-scrolling: touch;
+        background-color: #0D0D0D; /* Black for bottom overscroll */
       }
-      
-      #root {
-        /* Ensures the root element extends properly for overscroll */
-        min-height: 100vh;
-        min-height: 100dvh;
+
+      body::before {
+        content: '';
+        position: fixed;
+        top: -100vh;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: #F6F7F9; /* Gray for top overscroll */
+        z-index: -1;
       }
     </style>
   </head>
