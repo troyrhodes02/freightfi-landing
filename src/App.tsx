@@ -25,6 +25,8 @@ export default function App() {
     <ThemeProvider theme={theme}>
       <Box
         sx={{
+          bgcolor: "#0D0D0D",
+          minHeight: "100dvh",
           opacity: loaded ? 1 : 0,
           transform: loaded ? "translateY(0)" : "translateY(20px)",
           transition: "opacity 1.2s ease-out, transform 1.2s ease-out",
@@ -32,8 +34,7 @@ export default function App() {
       >
         <Box 
           sx={{ 
-            bgcolor: "#F6F7F9", 
-            minHeight: "100dvh",
+            bgcolor: "#F6F7F9",
           }}
         >
           <NavBar />
