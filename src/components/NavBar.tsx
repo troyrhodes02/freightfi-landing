@@ -1,7 +1,7 @@
-import { AppBar, Toolbar, Typography, Box, Stack, Container, Link, Button } from "@mui/material";
-import Image from "./Image";
+import { AppBar, Toolbar, Typography, Box, Stack, Container, Link } from "@mui/material";
 
 export default function NavBar() {
+  // const navItems = ["Product", "Solutions", "About", "Resources", "Contact"];
 
   return (
     <AppBar
@@ -26,7 +26,8 @@ export default function NavBar() {
           }}
         >
         <Stack direction="row" alignItems="center" spacing={1.5}>
-          <Image
+          <Box
+            component="img"
             src="/images/FreightFi-logo.svg"
             alt="FreightFi Logo"
             sx={{
@@ -82,103 +83,60 @@ export default function NavBar() {
           ))} */}
         </Stack>
 
-      <Button
-        variant="outlined"
-        aria-label="Menu"
-        sx={{
-          display: { xs: "flex", md: "none" },
-          minWidth: "auto",
-          width: "40px",
-          height: "36px",
-          borderRadius: "6px",
-          border: "1px solid #4C80F5",
-          bgcolor: "#E9EFFD",
-          alignItems: "center",
-          justifyContent: "center",
-          p: 0,
-          "&:hover": {
+      {/* Commened out until we have navbar options implemented */}
+        {/* <Button
+          variant="outlined"
+          aria-label="Menu"
+          sx={{
+            display: { xs: "flex", md: "none" },
+            minWidth: "auto",
+            width: 48,
+            height: 48,
+            borderRadius: "8px",
             border: "1px solid #4C80F5",
             bgcolor: "#E9EFFD",
-          },
-        }}
-      >
-        <svg
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M3 12H21M3 6H21M3 18H21"
-            stroke="#000000"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-        </svg>
-      </Button>
-
-      <Button
-        component={Link}
-        href="https://calendar.app.google/jiyCYTJCvfRYMbyq6"
-        variant="outlined"
-        sx={{
-          display: { xs: "none", md: "flex" },
-          height: "44px",
-          width: "auto",
-          minWidth: "fit-content",
-          border: "1px solid #B9B9B9",
-          borderRadius: "41px",
-          padding: "8px 6px 8px 16px",
-          fontSize: "16px",
-          fontWeight: 500,
-          color: "#0D0D0D",
-          textTransform: "none",
-          whiteSpace: "nowrap",
-          justifyContent: "space-between",
-          alignItems: "center",
-          gap: "8px",
-          "&:hover": {
-            border: "1px solid #B9B9B9",
-            opacity: 0.8,
-            bgcolor: "transparent",
-          },
-        }}
-      >
-        Book a Demo
-        <Box
-          sx={{
-            display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            width: { xs: "28px", sm: "32px" },
-            height: { xs: "28px", sm: "32px" },
-            borderRadius: "50%",
-            bgcolor: "#4C80F5",
-            flexShrink: 0,
+            p: 0,
+            "&:hover": {
+              border: "1px solid #4C80F5",
+              bgcolor: "#E9EFFD",
+            },
           }}
         >
           <svg
-            width="8"
-            height="14"
-            viewBox="0 0 8 14"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            style={{
-              marginLeft: "1px",
-            }}
           >
             <path
-              d="M1 1L7 7L1 13"
-              stroke="#FEFFFF"
+              d="M3 12H21M3 6H21M3 18H21"
+              stroke="#4C80F5"
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
             />
           </svg>
-        </Box>
-      </Button>
+        </Button> */}
+
+      <Link href="https://calendar.app.google/jiyCYTJCvfRYMbyq6">
+        <Box
+          component="img"
+          src="/images/book-a-demo.svg"
+          alt="Book a Demo"
+          sx={{
+            display: { xs: "none", md: "block" },
+            height: 44,
+            width: "auto",
+            cursor: "pointer",
+            "&:hover": {
+              opacity: 0.9,
+            },
+          }}
+          />
+          </Link>
       </Toolbar>
       </Container>
     </AppBar>
