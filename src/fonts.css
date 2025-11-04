@@ -66,6 +66,19 @@ body {
   min-height: 100vh;
 }
 
+/* Pseudo-element for iOS overscroll at bottom */
+body::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 200%;
+  background: #0D0D0D;
+  pointer-events: none;
+  z-index: -1;
+}
+
 /* Global font settings */
 * {
   font-family: 'Aeonik', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
