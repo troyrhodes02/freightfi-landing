@@ -215,8 +215,9 @@ export default function FinancialSystem() {
               alignItems: "center",
               justifyContent: "center",
               overflow: "hidden",
-              aspectRatio: { xs: "16 / 9", md: "auto" },
-              py: "16px",
+              aspectRatio: { xs: "4 / 3", md: "auto" },
+              py: { xs: "12px", md: "16px" },
+              px: { xs: "12px", md: "0px" },
               minHeight: { xs: "auto", md: 0 },
             }}
           >
@@ -225,7 +226,7 @@ export default function FinancialSystem() {
               alt="Every invoice verified"
               sx={{
                 width: "100%",
-                maxWidth: { xs: "100%", sm: 540, md: 580 },
+                maxWidth: { xs: "90%", sm: 540, md: 580 },
                 height: "auto",
                 borderRadius: 6,
                 display: "block",
