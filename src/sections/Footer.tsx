@@ -10,8 +10,7 @@ const Footer: React.FC = () => {
       sx={{
         backgroundColor: '#0D0D0D',
         width: '100%',
-        pt: { xs: 6, md: 8 },
-        pb: 4,
+        py: { xs: 3, md: 12 },
       }}
     >
       <Container maxWidth="xl" sx={{ px: { xs: 2, md: 4 } }}>

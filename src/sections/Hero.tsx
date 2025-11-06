@@ -6,7 +6,7 @@ export default function Hero() {
     <Box
       component="section"
       sx={{
-        py: { xs: 4, md: 8 },
+        py: { xs: 3, md: 12 },
       }}
     >
       <Stack spacing={{ xs: 2, md: 4 }}>

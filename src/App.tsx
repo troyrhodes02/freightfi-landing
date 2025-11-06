@@ -5,6 +5,7 @@ import Hero from "./sections/Hero";
 import Values from "./sections/Values";
 import TransformFlow from "./sections/TransformFlow";
 import Footer from "./sections/Footer";
+import FinancialSystem from "./sections/FinancialSystem";
 
 const theme = createTheme({
   typography: {
@@ -57,6 +58,7 @@ export default function App() {
         </Container>
         <Values />
         <TransformFlow />
+        <FinancialSystem />
       </Box>
       <Footer />
     </ThemeProvider>

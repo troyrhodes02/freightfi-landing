@@ -138,7 +138,7 @@ export default function Values() {
       component="section"
       sx={{
         bgcolor: "#FFFFFF",
-        py: { xs: 6, md: 12 },
+        py: { xs: 3, md: 12 },
       }}
     >
       <Box sx={{ maxWidth: 1340, mx: "auto", px: { xs: 2, md: 4 } }}>
