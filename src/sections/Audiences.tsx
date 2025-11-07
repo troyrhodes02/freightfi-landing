@@ -1,4 +1,5 @@
 import { Box, Typography } from "@mui/material";
+import Image from "../components/Image";
 
 export default function Audiences() {
   return (
@@ -53,8 +54,7 @@ export default function Audiences() {
             },
           }}
         >
-          <Box
-            component="img"
+          <Image
             src="/images/neutron.svg"
             alt=""
             aria-hidden
@@ -103,22 +103,24 @@ export default function Audiences() {
           flexWrap: "wrap",
           gap: { xs: 2, md: 4 },
           mt: { xs: 4, md: 6 },
-          px: { xs: 1, sm: 2, md: 6 },
+          px: { xs: 2, sm: 2, md: 6 },
         }}
       >
         <Box>
           <Box
             sx={{
-              width: { xs: "100%", sm: "90%", md: 416 },
-              maxWidth: { xs: 280, sm: 320, md: 416 },
+              width: { xs: "100%", sm: "100%", md: 416 },
+              maxWidth: { xs: 300, sm: 340, md: 416 },
               height: { xs: "auto", md: 371 },
               borderRadius: { xs: "16px", md: "24px" },
-              p: { xs: 1, sm: 1.5, md: 3 },
+              px: { xs: 1, sm: 2, md: 3 },
+              py: { xs: 2.5, sm: 2, md: 3 },
               display: "flex",
               flexDirection: "column",
               justifyContent: "space-between",
               gap: 1,
               backgroundColor: "#E3EBFC",
+              mx: "auto",
             }}
           >
             <Box
@@ -133,8 +135,7 @@ export default function Audiences() {
                 backgroundColor: "#C6D6FB",
               }}
             >
-              <Box
-                component="img"
+              <Image
                 src="/images/fleet-operators.svg"
                 alt=""
                 aria-hidden
@@ -206,10 +207,11 @@ export default function Audiences() {
           <Box
             sx={{
               width: { xs: "100%", sm: "90%", md: 416 },
-              maxWidth: { xs: 280, sm: 320, md: 416 },
+              maxWidth: { xs: 300, sm: 340, md: 416 },
               height: { xs: "auto", md: 371 },
               borderRadius: { xs: "16px", md: "24px" },
-              p: { xs: 1, sm: 1.5, md: 3 },
+              px: { xs: 1, sm: 2, md: 3 },
+              py: { xs: 2.5, sm: 2, md: 3 },
               display: "flex",
               flexDirection: "column",
               justifyContent: "space-between",
@@ -229,8 +231,7 @@ export default function Audiences() {
                 backgroundColor: "#C9F7E0",
               }}
             >
-              <Box
-                component="img"
+              <Image
                 src="/images/3pl-providers.svg"
                 alt=""
                 aria-hidden
@@ -302,10 +303,11 @@ export default function Audiences() {
           <Box
             sx={{
               width: { xs: "100%", sm: "90%", md: 416 },
-              maxWidth: { xs: 280, sm: 320, md: 416 },
+              maxWidth: { xs: 300, sm: 340, md: 416 },
               height: { xs: "auto", md: 371 },
               borderRadius: { xs: "16px", md: "24px" },
-              p: { xs: 1, sm: 1.5, md: 3 },
+              px: { xs: 1, sm: 2, md: 3 },
+              py: { xs: 2.5, sm: 2, md: 3 },
               display: "flex",
               flexDirection: "column",
               justifyContent: "space-between",
@@ -325,8 +327,7 @@ export default function Audiences() {
                 backgroundColor: "#C8F9F9",
               }}
             >
-              <Box
-                component="img"
+              <Image
                 src="/images/freight-brokers.svg"
                 alt=""
                 aria-hidden
